@@ -35,14 +35,11 @@ requirements:
     - {{ posix }}make
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-    - {{ posix }}gmp
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - {{ posix }}gmp
   run:
     - r-base
-    - {{ posix }}gmp
 test:
   commands:
     - $R -e "library('rcdd')"           # [not win]
