@@ -41,6 +41,7 @@ requirements:
     - {{ posix }}gmp
   run:
     - r-base
+    - {{ posix }}gmp
 test:
   commands:
     - $R -e "library('rcdd')"           # [not win]
