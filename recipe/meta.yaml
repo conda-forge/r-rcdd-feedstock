@@ -19,6 +19,7 @@ build:
   missing_dso_whitelist:
     - '*/R.dll'
     - '*/libgmp-10.dll'
+    - '*/gmp.h'
 
 requirements:
   build:
