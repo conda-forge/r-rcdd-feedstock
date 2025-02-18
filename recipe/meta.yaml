@@ -12,42 +12,47 @@ source:
   sha256: 9f8acd8cad398369e93067196baa26d2d3109ce8d34daa1436f7bed42473db75
 
 build:
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
   missing_dso_whitelist:
-    - '*/R.dll'
-    - '*/libgmp-10.dll'
+    - '*/R.dll'          # [win]
+    - '*/Rblas.dll'      # [win]
+    - '*/Rlapack.dll'    # [win]
+    - '*/libgmp-10.dll'  # [win]
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - {{ stdlib("c") }}
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - {{ compiler('c') }}          # [not win]
+    - {{ stdlib('c') }}            # [not win]
+    - {{ compiler('m2w64_c') }}    # [win]
+    - {{ stdlib('m2w64_c') }}      # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}sed               # [win]
     - {{ posix }}grep              # [win]
     - {{ posix }}autoconf
     - {{ posix }}automake          # [not win]
     - {{ posix }}automake-wrapper  # [win]
-    - {{ posix }}pkg-config
+    - pkg-config
     - {{ posix }}make
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - gmp
   run:
     - r-base
+
 test:
   commands:
     - $R -e "library('rcdd')"           # [not win]
     - "\"%R%\" -e \"library('rcdd')\""  # [win]
 
 about:
-  home: https://www.stat.umn.edu/geyer/rcdd/, https://github.com/cjgeyer/rcdd
+  home: https://www.stat.umn.edu/geyer/rcdd/
+  dev_url: https://github.com/cjgeyer/rcdd
   license: GPL-2.0-only
   summary: 'R interface to (some of) cddlib (<https://github.com/cddlib/cddlib>). Converts back
     and forth between two representations of a convex polytope: as solution of a set
@@ -57,7 +62,7 @@ about:
     arithmetic.'
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:

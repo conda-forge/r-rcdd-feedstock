@@ -7,20 +7,24 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rcdd-feedstoc
 About r-rcdd
 ------------
 
-Home: https://www.stat.umn.edu/geyer/rcdd/, https://github.com/cjgeyer/rcdd
+Home: https://www.stat.umn.edu/geyer/rcdd/
 
 Package license: GPL-2.0-only
 
 Summary: R interface to (some of) cddlib (<https://github.com/cddlib/cddlib>). Converts back and forth between two representations of a convex polytope: as solution of a set of linear equalities and inequalities and as convex hull of set of points and rays. Also does linear programming and redundant generator elimination (for example, convex hull in n dimensions).  All functions can use exact infinite-precision rational arithmetic.
+
+Development: https://github.com/cjgeyer/rcdd
 
 About r-rcdd
 ------------
 
-Home: https://www.stat.umn.edu/geyer/rcdd/, https://github.com/cjgeyer/rcdd
+Home: https://www.stat.umn.edu/geyer/rcdd/
 
 Package license: GPL-2.0-only
 
 Summary: R interface to (some of) cddlib (<https://github.com/cddlib/cddlib>). Converts back and forth between two representations of a convex polytope: as solution of a set of linear equalities and inequalities and as convex hull of set of points and rays. Also does linear programming and redundant generator elimination (for example, convex hull in n dimensions).  All functions can use exact infinite-precision rational arithmetic.
+
+Development: https://github.com/cjgeyer/rcdd
 
 Current build status
 ====================
@@ -54,6 +58,34 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=22436&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcdd-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_r_base4.3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_r_base4.4</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=22436&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcdd-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_r_base4.4" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=22436&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcdd-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_r_base4.3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_r_base4.4</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=22436&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcdd-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_r_base4.4" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_r_base4.3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=22436&branchName=main">
@@ -65,6 +97,20 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=22436&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcdd-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.4" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=22436&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcdd-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_r_base4.3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_r_base4.4</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=22436&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcdd-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_r_base4.4" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -211,5 +257,5 @@ Feedstock Maintainers
 =====================
 
 * [@Rassine](https://github.com/Rassine/)
-* [@conda-forge/r](https://github.com/conda-forge/r/)
+* [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
 
