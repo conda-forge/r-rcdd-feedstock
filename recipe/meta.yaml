@@ -1,4 +1,4 @@
-{% set version = '1.6' %}
+{% set version = "1.6-1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rcdd_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rcdd/rcdd_{{ version }}.tar.gz
-  sha256: 9f8acd8cad398369e93067196baa26d2d3109ce8d34daa1436f7bed42473db75
+  sha256: dbcb408a2db4005139550b9dcebd0c27138dc3fd726d9d3efda57c2ba9d8d20d
 
 build:
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -54,12 +54,8 @@ about:
   home: https://www.stat.umn.edu/geyer/rcdd/
   dev_url: https://github.com/cjgeyer/rcdd
   license: GPL-2.0-only
-  summary: 'R interface to (some of) cddlib (<https://github.com/cddlib/cddlib>). Converts back
-    and forth between two representations of a convex polytope: as solution of a set
-    of linear equalities and inequalities and as convex hull of set of points and rays.
-    Also does linear programming and redundant generator elimination (for example, convex
-    hull in n dimensions).  All functions can use exact infinite-precision rational
-    arithmetic.'
+  summary: 'R interface to (some of) cddlib (<https://github.com/cddlib/cddlib>). Converts back and forth between two representations of a convex polytope: as solution of a set of linear equalities and inequalities and as convex hull of set of points and rays. Also does linear programming and redundant generator elimination
+    (for example, convex hull in n dimensions).  All functions can use exact infinite-precision rational arithmetic.'
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
